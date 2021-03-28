@@ -1,5 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.css'
-import { reduxPage } from '../config/redux'
 import HomepageComponent from '../containers/homepage'
+import { initializeStore } from '../config/redux'
 
-export default reduxPage(HomepageComponent)
+export default function Index() {
+    return <HomepageComponent />
+}
+
+export function getServerSideProps() {
+    const reduxStore = initializeStore()
+
+    return { props: { ...reduxStore.getState() } }
+}

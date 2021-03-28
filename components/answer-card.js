@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReplayCard from './reply-card'
 import CardHeader from './card-header'
 import Card from './card'
-import ReplyInputComponent from '../containers/reply-input'
+import ReplyInput from './reply-input'
 
 const AnswerCard = ({
     answerData: {
@@ -20,15 +20,37 @@ const AnswerCard = ({
         <div className='ms-5'>
             <span className='card-text'>
                 {showMore ? fullAnswer : shortAnswer}
-                <button type="button" className="btn btn-link" onClick={() => setShowMore(!showMore)}>{showMore ? 'less' : 'more'}</button>
+                <button
+                    type="button"
+                    className="btn btn-link"
+                    onClick={() => setShowMore(!showMore)}>
+                    {showMore ? 'less' : 'more'}
+                </button>
             </span>
-            <ReplyInputComponent userName={user.userName} replyType='reply' parentAnswerKey={id} />
+            <ReplyInput
+                userName={user.userName}
+                replyType='reply'
+                parentAnswerKey={id}
+            />
             {
-                Boolean(replies.length) && replies.map(reply => <ReplayCard key={reply.id} replyData={reply} answerId={id} replyId={reply.id}>
-                    {
-                        reply.replies.map(nestedReply => <ReplayCard key={nestedReply.id} answerId={id} replyData={nestedReply} replyId={reply.id} nestedReplyKey={nestedReply.id} />)
-                    }
-                </ReplayCard>)
+                Boolean(replies.length) &&
+                replies.map(reply =>
+                    <ReplayCard
+                        key={reply.id}
+                        replyData={reply}
+                        answerId={id}
+                        replyId={reply.id}
+                    >
+                        {
+                            reply.replies.map(nestedReply =>
+                                <ReplayCard
+                                    key={nestedReply.id}
+                                    answerId={id}
+                                    replyData={nestedReply}
+                                    replyId={reply.id}
+                                    nestedReplyKey={nestedReply.id} />)
+                        }
+                    </ReplayCard>)
             }
         </div>
     </Card>

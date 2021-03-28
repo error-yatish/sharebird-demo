@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import CardHeader from './card-header'
-import ReplyInputComponent from '../containers/reply-input'
+import ReplyInput from './reply-input'
 
-const ReplyCard = ({ 
+const ReplyCard = ({
     replyData: {
         shortReply,
         fullReply,
@@ -12,7 +12,7 @@ const ReplyCard = ({
     answerId,
     nestedReplyKey,
     children
- }) => {
+}) => {
     const [showMore, setShowMore] = useState(false);
 
     return <>
@@ -22,9 +22,20 @@ const ReplyCard = ({
             <div className='ms-5'>
                 <p className='card-text mt-3'>
                     {showMore ? fullReply : shortReply}
-                    <button type="button" className="btn btn-link" onClick={() => setShowMore(!showMore)}>{showMore ? 'less' : 'more'}</button>
+                    <button
+                        type="button"
+                        className="btn btn-link"
+                        onClick={() => setShowMore(!showMore)}>
+                        {showMore ? 'less' : 'more'}
+                    </button>
                 </p>
-                <ReplyInputComponent userName={user.userName} replyType='reply' parentAnswerKey={answerId} parentReplyKey={replyId} nestedReplyKey={nestedReplyKey} />
+                <ReplyInput
+                    userName={user.userName}
+                    replyType='reply'
+                    parentAnswerKey={answerId}
+                    parentReplyKey={replyId}
+                    nestedReplyKey={nestedReplyKey}
+                />
                 {children}
             </div>
         </div>

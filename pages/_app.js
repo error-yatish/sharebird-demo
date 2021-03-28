@@ -1,14 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import Head from 'next/head'
+import { Provider } from 'react-redux'
+import { useStore } from '../config/redux'
 
-const MyApp = ({ Component, pageProps }) => (
-  <>
-    <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Head>
+const MyApp = ({ Component, pageProps }) => {
+  const store = useStore(pageProps.initialReduxState)
+  
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
-    <Component {...pageProps} />
-  </>
-)
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
+  )
+}
 
 export default MyApp

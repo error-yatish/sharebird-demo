@@ -11,7 +11,7 @@ export default {
     answers: [
         {
             id: 'question-001-answer-01',
-            shortAnswer: 'As I said in another answer, being a successful PMM relies heavily on being able to build relationships and trust with your cross-functional stakeholders. The tips in that answer about building relationships apply here, but I\'ll also add 2 things: 1. Always look for opportunities for PMM to add value, and make sure you understand other ...', 
+            shortAnswer: 'As I said in another answer, being a successful PMM relies heavily on being able to build relationships and trust with your cross-functional stakeholders. The tips in that answer about building relationships apply here, but I\'ll also add 2 things: 1. Always look for opportunities for PMM to add value, and make sure you understand other ...',
             fullAnswer: 'As I said in another answer, being a successful PMM relies heavily on being able to build relationships and trust with your cross-functional stakeholders. The tips in that answer about building relationships apply here, but I\'ll also add 2 things: 1. Always look for opportunities for PMM to add value, and make sure you understand other functions\' goals and priorities. If other functions can see the value PMM bring - and that you want to help, not hinder them - it\'s much easier to get a seat at the table - they\'ll want you to be there, because they\'ve seen the benefit of having you involved in the past. This doesn\'t mean giving in, doing whatever everyone else wants and never standing your ground, but it does mean being strategic about when to push back, when to go the extra mile and when to compromise. 2. There is always going to be some tension between functions, because whilst we all have the same ultimate goal (the business succeeding), functions also have their own goals and priorities. Whilst that tension can feel uncomfortable, as long as you can find compromise and still work together, it\'s a good thing because it helps keep things in check. For example, if I was a product manager, and my goal is adoption of my feature, of course I\'m going to want us to message every customer about that feature until they all use it. But as a PMM, I might know that there are also 10 other things we need to tell customers about, and I want to make sure we spread out messages so we\'re not annoying them by spamming them repeatedly. This may cause tension - but that tension will eventually lead to a better outcome, which is likely to be some sort of compromise between the two that gets the message to customers without annoying them.',
             user: {
                 userName: 'Jasmine Jaume',
@@ -73,7 +73,7 @@ export default {
                 {
                     id: 'question-001-answer-02-reply-01',
                     shortReply: 'Telling it like it is :) It is also very true ...',
-                    fullReply: 'Telling it like it is :) It is also very true.',
+                    fullReply: 'Telling it like it is :) It is also very true very different from each organization. I find the most successful way to develop a strong relationship is to show value from the start and align on your mutual goals / objectives.',
                     user: {
                         userName: 'Leanne Graham',
                         title: 'Product Marketing Manager',

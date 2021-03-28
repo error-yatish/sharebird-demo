@@ -1,8 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-const Meta = ({
-    question
-}) => {
+const Meta = ({ question }) => {
     return (
         <Head>
             <link
@@ -21,7 +19,7 @@ const Meta = ({
                 content={question}
             />
         </Head>
-    )
-}
+    );
+};
 
-export default Meta
+export default Meta;
